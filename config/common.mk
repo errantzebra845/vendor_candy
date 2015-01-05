@@ -64,7 +64,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dataroaming=false
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.selinux=1
+    ro.build.selinux=0
 
 # Thank you, please drive thru!
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
@@ -202,7 +202,6 @@ ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_PACKAGES += \
     procmem \
     procrank \
-    Superuser \
     su
 
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -217,8 +216,8 @@ endif
 PRODUCT_PACKAGE_OVERLAYS += vendor/candy5/overlay/common
 
 PRODUCT_VERSION_MAJOR = RC
-PRODUCT_VERSION_MINOR = v0.9.1
-PRODUCT_VERSION_MAINTENANCE = v0.9.1
+PRODUCT_VERSION_MINOR = v0.9.2
+PRODUCT_VERSION_MAINTENANCE = v0.9.2
 
 # Set CM_BUILDTYPE from the env RELEASE_TYPE, for jenkins compat
 
@@ -287,7 +286,7 @@ else
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
-  ro.candy5.version=$(candy5_VERSION) \
+  ro.candyroms.version=$(candy5_VERSION) \
   ro.candy5.releasetype=$(candy5_BUILDTYPE) \
   ro.modversion=$(candy5_VERSION) \
   ro.cmlegal.url=http://www.cyanogenmod.org/docs/privacy
